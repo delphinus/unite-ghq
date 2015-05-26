@@ -13,7 +13,7 @@ function unite#sources#ghq#define()
 endfunction
 
 function s:source.gather_candidates(args, context)
-  let candidates = split(unite#util#system('ghq list -p'), "\<NL>")
+  let candidates = split(unite#util#system(g:unite_ghq_executable . ' list -p'), "\<NL>")
   return map(candidates, '{
         \ "word": v:val,
         \ "action__path": v:val,
