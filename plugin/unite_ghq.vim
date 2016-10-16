@@ -12,7 +12,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 " }}}
 
-let g:unite_ghq_executable = get(g: 'unite_ghq_executable', 'ghq')
+let g:unite_ghq_executable = get(g:, 'unite_ghq_executable', 'ghq')
 
 " Restore 'cpoptions' {{{
 let &cpo = s:save_cpo
